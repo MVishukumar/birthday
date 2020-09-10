@@ -31,6 +31,7 @@
         font-family: "Freckle Face", cursive;
         background-color: #f7dc6f;
         color: #1b2631;
+        height: 100%;
       }
 
       .mt-5 {
@@ -42,6 +43,7 @@
         font-weight: 900;
         font-size: 4.5em;
       }
+
       .ml4 .letters {
         position: absolute;
         margin: auto;
@@ -54,9 +56,8 @@
   </head>
 
   <body class="container">
-    <div class="row">
-      <div class="col-4"></div>
-      <div class="col-4">
+    <div class="class="h-100 row align-items-center"">
+      <div class="col">
         <!-- <div class="container mt-5">
           <p class="text-center">
             <i class="fa fa-birthday-cake" aria-hidden="true"></i>
@@ -75,7 +76,6 @@
           </h1>
         </div>
       </div>
-      <div class="col-4"></div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -108,7 +108,9 @@
       ml4.delay = 500;
 
       anime
-        .timeline({ loop: true })
+        .timeline({
+          loop: true,
+        })
         .add({
           targets: ".ml4 .letters-1",
           opacity: ml4.opacityIn,
